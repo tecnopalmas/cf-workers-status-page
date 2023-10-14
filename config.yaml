@@ -16,7 +16,7 @@ settings:
 
 monitors:
   - id: ingravechat-Web-Application # unique identifier
-    name: ingrave chat: Web Application
+    name: ingrave chat:Web Application
     description: 'O aplicativo que você vê em https://app.ingrave.com.br quando está logado.' # default=empty
     url: 'https://app.ingrave.com.br/' # URL to fetch
     method: GET # default=GET
