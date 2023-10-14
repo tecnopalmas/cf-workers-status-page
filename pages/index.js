@@ -94,7 +94,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
             <a href="https://ingrave.com.br/" target="_blank">
               Ingrave Solutions{' '}
             </a>
-            &{' '}
+            {' '}
           </div>
         </div>
       </div>
