@@ -1,36 +1,37 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: 'Ingrave - Status'
+  url: 'https://status.ingrave.com.br' # used for Slack messages
   logo: logo_thumbnail.svg # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
+  allmonitorsOperational: 'Todos os sistemas operacionais'
+  notAllmonitorsOperational: 'Nem todos os sistemas operacionais'
+  monitorLabelOperational: 'Operacional'
+  monitorLabelNotOperational: 'Não Operacional'
   monitorLabelNoData: 'No data'
   dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  dayInHistogramOperational: 'Tudo certo'
+  dayInHistogramNotOperational: ' incidente(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: ingravechat-Web-Application # unique identifier
+    name: ingrave chat: Web Application
+    description: 'O aplicativo que você vê em https://app.ingrave.com.br quando está logado.' # default=empty
+    url: 'https://app.ingrave.com.br/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
   - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+    name: www.ingrave.com.br
+    description: 'A pagina do nosso site em https://ingrave.com.br.'
+    url: 'https://ingrave.com.br'
     method: GET
     expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
+    #followRedirect: false
+    linkable: false # allows the title to be a link, default=true
 
   - id: blog-cloudflare-com
     name: The Cloudflare Blog
